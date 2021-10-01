@@ -1,0 +1,19 @@
+<h2 class= "mt-5 mb-5 text-center">ひとことQ&A<h2>
+<%= link_to "質問してみる", new_question_path, class: "btn btn-primary mb-5 d-block w-25 mx-auto" %>
+<div class= "row">
+ <div class= "col-md-10 mx-auto">
+
+   <table class="table table-striped">
+     <thead class="thead-light">
+       <tr>
+         <th>質問</th>
+         <th>投稿者</th>
+         <th>作成日<th>
+       </tr>
+     </thead>
+     <tbody>
+      <%= render @questions %>
+     </tbody>
+   </table>
+ </div>
+</div>

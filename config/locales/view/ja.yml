@@ -1,0 +1,10 @@
+ja:
+  defaults:
+    post: '投稿'
+    edit: '編集'
+    delete: '削除'
+    message:
+      created: "%{item}を作成しました"
+      deleted: "%{item}を削除しました"
+      updated: "%{item}を更新しました."
+    
