@@ -5,6 +5,7 @@ ja:
     delete: '削除'
     message:
       created: "%{item}を作成しました"
+      not_created: "%{item}を作成できませんでした"
       deleted: "%{item}を削除しました"
-      updated: "%{item}を更新しました."
-    
+      updated: "%{item}を更新しました"
+      not_updated: "%{item}を更新できませんでした"

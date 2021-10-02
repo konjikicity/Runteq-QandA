@@ -1,9 +1,13 @@
 ja:
   activerecord:
     models:
-    　　question: "質問"
+        question: "質問"
+        answer: "回答"
     attributes:
       question:
         name: '名前'
         content: '質問内容'
+      answer:
+        name: '名前'
+        content: '回答内容'
         

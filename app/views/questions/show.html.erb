@@ -1,2 +1,43 @@
-<h1>Question#show</h1>
-<p>Find me in app/views/question/show.html.erb</p>
+<div class = "row">
+  <div class= "col-md-12 mt-5">
+    <h2><%= @question.content %></h2>
+  <div>
+    form: <%= @question.name %>
+  </div>
+  <hr>
+  <div>
+    <h3>回答一覧</h3>
+    <table class= "table table-striped">
+      <% if @question.answers.any? %>
+    <thead class= "thead-light">
+      <tr>
+        <td>Name</td>
+        <td>Answer</td>
+        <td>like</td>
+      <tr>
+    </thead>
+  <tbody>
+    <% @question.answers.each do |awnser| %>
+      <tr>
+        <td>
+          <%= awnser.name %>
+        </td>
+        <td>
+          <%= awnser.content %>
+        </td>
+        <td>
+        edit delete
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+      <% else %>
+        <p>回答がまだありません</p>
+      <% end %>
+  </table>
+  <%= render 'answers/form', { answer: @answer, question: @question } %>
+  <div>
+    <%= link_to '> Home', root_path %>
+  </div>
+ </div>
+</div>

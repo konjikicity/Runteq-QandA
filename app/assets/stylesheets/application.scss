@@ -12,4 +12,11 @@
  *
  */
  @import "bootstrap";
-
+ @import "index";
+ @import "font-awesome";
+ @font-face {
+     font-family: 'Corporate-Logo-Rounded';
+     src: font-url('/assets/Corporate-Logo-Rounded.ttf') format("truetype");
+     font-weight: normal;
+     font-style: normal;
+ }

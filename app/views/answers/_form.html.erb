@@ -1,0 +1,15 @@
+<h3>回答の投稿</h3>
+<%= form_with model: [question, answer], local: true do |f| %>
+<%= f.hidden_field :question_id, { value: question.id} %>
+   <div class ="form-group">
+     <%= f.label :name %>
+     <%= f.text_field :name, class: 'form-control' %>
+   </div>
+   <div class ="form-group">
+     <%= f.label :content %>
+     <%= f.text_area :content, class: 'form-control' %>
+   </div>
+   <div class= 'text-center'>
+   <%= f.submit t('defaults.post'), class: 'btn btn-primary'%>
+   </div>
+<% end %>

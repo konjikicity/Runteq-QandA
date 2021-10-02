@@ -1,10 +1,4 @@
-<tr>
-  <td><%= question.content %></td>
-  <td><%= question.name %></td>
-  <td><%= question.created_at %></td>
-  <td>
-  <%= link_to "編集", edit_question_path(question), class: 'btn btn-success' %>
-  <%= link_to "削除", questions_path, method: :delete, class: 'btn btn-danger' %>
-  </td>
-  
-</tr>
+  <tr>
+  <td>Q.<%= question.id %></td>
+  <td class= "question-font-size"><%= link_to question.content, question_path(question) %></td>
+  </tr>

@@ -5,23 +5,26 @@ class QuestionsController < ApplicationController
     @questions = Question.all
   end
 
-  def show;end
-
-  def new
-    @question = Question.new
-  end
-
-  def create
-    @question = Question.new(question_params)
-    if @question.save
-      redirect_to root_path, success: t('defaults.message.created', item: Question.model_name.human)
-    else
-      flash.now[:danger] = t('defaults.message.deleted', item: Question.model_name.human)
-      render :new
-    end
+  def show
+    @answer = Answer.new
+    @answers = Answer.all
   end
 
   def edit;end
+
+  def update
+    if @question.update(question_params)
+      redirect_to root_path, success: t('defaults.message.updated', item: Question.model_name.human)
+    else
+      flash.now[:danger] = t('defaults.message.not_updated', item: Question.model_name.human)
+      render :edit
+    end
+  end
+
+  def destroy
+    @question.destroy!
+    redirect_to root_path, success: t('defaults.message.deleted', item: Question.model_name.human)
+  end
 
   private
 
