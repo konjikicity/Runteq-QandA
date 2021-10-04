@@ -2,7 +2,7 @@
   <div class= "col-md-12 mt-5">
     <h2><%= @question.content %></h2>
   <div>
-    form: <%= @question.name %>
+    <%= t('.from') %><%= @question.name %>
   </div>
   <hr>
   <div>
@@ -11,33 +11,17 @@
       <% if @question.answers.any? %>
     <thead class= "thead-light">
       <tr>
-        <td>Name</td>
-        <td>Answer</td>
-        <td>like</td>
+        <td><%= t('.name') %></td>
+        <td><%= t('.answer') %></td>
       <tr>
     </thead>
   <tbody>
-    <% @question.answers.each do |awnser| %>
-      <tr>
-        <td>
-          <%= awnser.name %>
-        </td>
-        <td>
-          <%= awnser.content %>
-        </td>
-        <td>
-        edit delete
-        </td>
-      </tr>
-    <% end %>
+    <%= render 'answers/answers', { answers: @answers }%>
   </tbody>
       <% else %>
         <p>回答がまだありません</p>
       <% end %>
   </table>
   <%= render 'answers/form', { answer: @answer, question: @question } %>
-  <div>
-    <%= link_to '> Home', root_path %>
-  </div>
  </div>
 </div>

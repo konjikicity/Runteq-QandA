@@ -9,3 +9,13 @@ ja:
       deleted: "%{item}を削除しました"
       updated: "%{item}を更新しました"
       not_updated: "%{item}を更新できませんでした"
+  static_pages:
+    top:
+      title: 'エンジニアQ&A'
+  questions:
+    show:
+      name: '名前'
+      answer: '回答'
+      from: '質問者: '
+    index:
+      question: '質問してみる'

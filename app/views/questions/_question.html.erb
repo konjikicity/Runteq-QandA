@@ -1,4 +1,4 @@
   <tr>
   <td>Q.<%= question.id %></td>
-  <td class= "question-font-size"><%= link_to question.content, question_path(question) %></td>
+  <td><%= link_to question.content, question_path(question), class: "question-font-size text-dark" %></td>
   </tr>

@@ -7,10 +7,24 @@ class QuestionsController < ApplicationController
 
   def show
     @answer = Answer.new
-    @answers = Answer.all
+    @answers = Answer.all.includes(:question)
   end
 
   def edit;end
+
+  def new
+    @question = Question.new
+  end
+
+  def create
+    @question = Question.new(question_params)
+    if @question.save
+      redirect_to questions_path, success: t('defaults.message.created', item: Question.model_name.human)
+    else
+      flash.now[:danger] = t('defaults.message.not_created', item: Question.model_name.human)
+      render :new
+    end
+  end
 
   def update
     if @question.update(question_params)
