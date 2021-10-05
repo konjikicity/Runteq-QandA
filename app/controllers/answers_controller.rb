@@ -1,4 +1,6 @@
 class AnswersController < ApplicationController
+  before_action :set_answer, only: %i[edit update destroy]
+  
   def create
     @question = Question.find(params[:question_id])
     @answer = Answer.new
@@ -10,7 +12,20 @@ class AnswersController < ApplicationController
     end
   end
   
-  def edit
+  def edit;end
+
+  def update
+    if @answer.update(answer_params)
+      redirect_to question_path(@question), success: t('defaults.message.updated', item: Answer.model_name.human)
+    else
+      flash[:danger] = t('defaults.message.not_updated', item: Answer.model_name.human)
+      render :edit
+    end
+  end
+
+  def destroy
+    @answer.destroy!
+    redirect_to question_path(@question), success: t('defaults.message.deleted', item: Answer.model_name.human)
   end
 
   private
@@ -18,4 +33,10 @@ class AnswersController < ApplicationController
   def answer_params
     params.require(:answer).permit(:name, :content, :question_id)
   end
+
+  def set_answer
+    @question = Question.find(params[:question_id])
+    @answer =  @question.answers.find(params[:id])
+  end
+
 end

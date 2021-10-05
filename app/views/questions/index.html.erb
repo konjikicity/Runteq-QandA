@@ -1,12 +1,13 @@
-<h2 class="mt-5 mb-5 text-center">僕がRUNTEQにしてみたい50の質問<h2>
+<h2 class="mt-5 mb-5 text-center"><%= t('.title') %><h2>
 <%= link_to t('.question'), new_question_path, class: 'btn btn-warning d-block mx-auto w-25 mb-5' %>
 <div class ="row">
   <div class="col-md-12">
     <table class="table table-striped text-size">
       <thead class="thead-light">
         <tr>
-          <th>質問番号</th>
-          <th>質問</th>
+          <th><%= t('defaults.question')%></th>
+          <th><%= t('defaults.name')%></th>
+          <th><%= t('defaults.created_at') %><th>
         <tr>
       </thead>
       <tbody>

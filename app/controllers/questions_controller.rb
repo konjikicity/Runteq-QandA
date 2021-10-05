@@ -28,7 +28,7 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params)
-      redirect_to root_path, success: t('defaults.message.updated', item: Question.model_name.human)
+      redirect_to questions_path, success: t('defaults.message.updated', item: Question.model_name.human)
     else
       flash.now[:danger] = t('defaults.message.not_updated', item: Question.model_name.human)
       render :edit
@@ -37,7 +37,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy!
-    redirect_to root_path, success: t('defaults.message.deleted', item: Question.model_name.human)
+    redirect_to questions_path(@question), success: t('defaults.message.deleted', item: Question.model_name.human)
   end
 
   private

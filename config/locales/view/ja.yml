@@ -3,19 +3,39 @@ ja:
     post: '投稿'
     edit: '編集'
     delete: '削除'
+    update: '更新'
+    created_at: '作成日'
+    name: '名前'
+    question: '質問'
     message:
       created: "%{item}を作成しました"
       not_created: "%{item}を作成できませんでした"
       deleted: "%{item}を削除しました"
       updated: "%{item}を更新しました"
       not_updated: "%{item}を更新できませんでした"
+      delete_confirm: "削除してもよろしいですか？"
   static_pages:
     top:
-      title: 'エンジニアQ&A'
+      title: 'RUNTEQ Q&A'
   questions:
     show:
       name: '名前'
       answer: '回答'
+      title: '回答一覧'
       from: '質問者: '
+      answer_post: '回答の投稿'
+      no_answer: '回答がまだありません'
     index:
       question: '質問してみる'
+      title: '質問一覧'
+    new:
+      title: '新規質問'
+    edit:
+      title: '質問の編集'
+
+  answers:
+  time:
+    formats:
+      default: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
+      long: "%Y/%m/%d %H:%M"
+      short: "%m/%d %H:%M"

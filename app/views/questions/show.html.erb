@@ -6,22 +6,24 @@
   </div>
   <hr>
   <div>
-    <h3>回答一覧</h3>
+    <h3><%= t('.title') %></h3>
     <table class= "table table-striped">
       <% if @question.answers.any? %>
     <thead class= "thead-light">
       <tr>
-        <td><%= t('.name') %></td>
-        <td><%= t('.answer') %></td>
+        <td class ="w-25"><%= t('.name') %></td>
+        <td class="w-auto"><%= t('.answer') %></td>
+        <td class="w-auto"></td>
       <tr>
     </thead>
   <tbody>
     <%= render 'answers/answers', { answers: @answers }%>
   </tbody>
       <% else %>
-        <p>回答がまだありません</p>
+        <p><%= t('.no_answer') %></p>
       <% end %>
   </table>
+  <h3><%= t('.answer_post') %></h3>
   <%= render 'answers/form', { answer: @answer, question: @question } %>
  </div>
 </div>
