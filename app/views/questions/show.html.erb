@@ -1,5 +1,6 @@
-<div class = "row">
-  <div class= "col-md-12 mt-5">
+<% content_for(:title, t('.title')) %>
+<div class ='row'>
+  <div class= 'col-md-12 mt-5'>
     <h2><%= @question.content %></h2>
   <div>
     <%= t('.from') %><%= @question.name %>
@@ -7,13 +8,14 @@
   <hr>
   <div>
     <h3><%= t('.title') %></h3>
-    <table class= "table table-striped">
+    <table class= 'table table-striped'>
       <% if @question.answers.any? %>
-    <thead class= "thead-light">
+    <thead class='thead-light'>
       <tr>
-        <td class ="w-25"><%= t('.name') %></td>
-        <td class="w-auto"><%= t('.answer') %></td>
-        <td class="w-auto"></td>
+        <td class ='w-auto'><%= t('.name') %></td>
+        <td class='w-50'><%= t('.answer') %></td>
+        <td class='w-auto'>作成日</td>
+        <td class='w-auto '></td>
       <tr>
     </thead>
   <tbody>
@@ -23,7 +25,9 @@
         <p><%= t('.no_answer') %></p>
       <% end %>
   </table>
+  <%= paginate @answers %>
   <h3><%= t('.answer_post') %></h3>
   <%= render 'answers/form', { answer: @answer, question: @question } %>
  </div>
+
 </div>

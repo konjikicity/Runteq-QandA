@@ -2,12 +2,12 @@ class QuestionsController < ApplicationController
   before_action :set_question, only: %i[edit show update destroy]
   
   def index
-    @questions = Question.all
+    @questions = Question.all.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def show
-    @answer = Answer.new
-    @answers = Answer.all.includes(:question)
+    @answer = current_user.answers.new
+    @answers = @question.answers.includes(:question).order(created_at: :desc).page(params[:page])
   end
 
   def edit;end
@@ -17,7 +17,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.new(question_params)
+    @question = current_user.questions.build(question_params)
     if @question.save
       redirect_to questions_path, success: t('defaults.message.created', item: Question.model_name.human)
     else

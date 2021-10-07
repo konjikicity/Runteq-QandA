@@ -1,14 +1,13 @@
 class AnswersController < ApplicationController
-  before_action :set_answer, only: %i[edit update destroy]
-  
+  before_action :set_answers, only: %i[edit show update destroy]
   def create
     @question = Question.find(params[:question_id])
-    @answer = Answer.new
-    if @answer.update(answer_params)
+    @answer = current_user.answers.build(answer_params)
+    if @answer.save
       redirect_to question_path(@question), success: t('defaults.message.created', item: Answer.model_name.human)
     else
-      flash[:danger] = t('defaults.message.not_created', item: Answer.model_name.human)
-      render :show
+      redirect_to question_path(@question), danger: t('defaults.message.not_created', item: Answer.model_name.human)
+      
     end
   end
   
@@ -34,9 +33,9 @@ class AnswersController < ApplicationController
     params.require(:answer).permit(:name, :content, :question_id)
   end
 
-  def set_answer
+  def set_answers
+    @answer = Answer.find(params[:id])
     @question = Question.find(params[:question_id])
-    @answer =  @question.answers.find(params[:id])
-  end
+  end 
 
 end

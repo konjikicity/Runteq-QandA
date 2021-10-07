@@ -7,6 +7,11 @@ ja:
     created_at: '作成日'
     name: '名前'
     question: '質問'
+    title: 'RUNTEQ Q&A'
+    logout: 'ログアウト'
+    login: 'ログイン'
+    register: '登録'
+    questions_all: '質問一覧'
     message:
       created: "%{item}を作成しました"
       not_created: "%{item}を作成できませんでした"
@@ -14,6 +19,14 @@ ja:
       updated: "%{item}を更新しました"
       not_updated: "%{item}を更新できませんでした"
       delete_confirm: "削除してもよろしいですか？"
+      require_login: 'ログインしてください'
+  views:
+    pagination:
+      first: "&laquo; 最初"
+      last: "最後 &raquo;"
+      previous: "&lsaquo; 前"
+      next: "次 &rsaquo;"
+      truncate: "..."
   static_pages:
     top:
       title: 'RUNTEQ Q&A'
@@ -32,8 +45,24 @@ ja:
       title: '新規質問'
     edit:
       title: '質問の編集'
-
   answers:
+    edit:
+      title: '回答の編集'
+  user_sessions:
+    create:
+      success: 'ログインに成功しました'
+      fail: 'ログインに失敗しました' 
+    new:
+      title: 'ログイン'
+      to_register_page: '新規登録はこちら'
+    destroy:
+      success: 'ログアウトしました'
+  users:
+    create:
+      success: 'ユーザー登録が完了しました' 
+      fail: 'ユーザー登録に失敗しました' 
+    new:
+      title: 'ユーザー登録'
   time:
     formats:
       default: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"

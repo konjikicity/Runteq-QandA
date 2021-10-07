@@ -1,11 +1,14 @@
-<div class="mx-auto" style="width: 500px;">
+<div class='mx-auto' style='width: 500px;'>
   <div>
-    <h1 class= "display-4 text-center mt-5"><%= t('.title') %></h1>
-    <%= image_tag "situmon.png", class: "d-block mx-auto w-50" %>
-    <p class="text-center mt-5">こちらはRUNTEQ生に気になる質問をして</p>
-    <p class="text-center mb-5">回答を共有するサービスになります！質問、回答お待ちしております！</p>
-    <div class ="text-center d-block">
-    <%= link_to "質問一覧", questions_path, class: 'btn btn-warning'%>
+    <h1 class= 'display-4 text-center mt-5'><%= t('.title') %></h1>
+    <%= image_tag 'situmon.png', class: 'd-block mx-auto w-50' %>
+    <p class='text-center mt-5'>こちらはRUNTEQ生に気になる質問をして</p>
+    <p class='text-center mb-5'>回答を共有するサービスになります！質問、回答お待ちしております！</p>
+    <div class ='text-center d-block'>
+    <% if logged_in? %>
+    <% else %>
+     <%= link_to t('defaults.login'), login_path, class: 'btn btn-warning'%>
+    <% end %>
     </div>
   </div>
 </div>

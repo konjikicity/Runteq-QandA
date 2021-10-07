@@ -3,6 +3,7 @@ ja:
     models:
       question: '質問'
       answer: '回答'
+      
     attributes:
         question:
           name: '名前'
@@ -10,4 +11,9 @@ ja:
         answer:
           name: '名前'
           content: '回答内容'
-        
+        user:
+          first_name: '名'
+          last_name: '姓'
+          email: 'メールアドレス'
+          password: 'パスワード'
+          password_confirmation: 'パスワード確認'
