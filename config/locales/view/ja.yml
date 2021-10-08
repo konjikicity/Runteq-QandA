@@ -31,6 +31,7 @@ ja:
     top:
       title: 'RUNTEQ Q&A'
       register_page: '新規登録'
+      questions_all: '質問一覧'
   questions:
     show:
       name: '名前'

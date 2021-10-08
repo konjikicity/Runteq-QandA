@@ -9,7 +9,7 @@
     <%= l answer.created_at, format: :short %>
   </td>
   <td class='w-auto'>
-  <% if current_user.own?(answer) %>
+  <% if current_user&.own?(answer) %>
   <%= link_to t('defaults.edit'), edit_question_answer_path(@question, answer), class: 'btn btn-warning' %>
   <%= link_to t('defaults.delete'), question_answer_path(@question, answer), class: 'btn btn-warning', method: :delete, data: { confirm: t('defaults.message.delete_confirm') } %>
   <% end %>

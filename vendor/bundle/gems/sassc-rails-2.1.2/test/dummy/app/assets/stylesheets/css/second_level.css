@@ -1,0 +1,7 @@
+@import url(/Users/onodaosamu/workspace/runteq/PF/tameninaru/vendor/bundle/gems/sassc-rails-2.1.2/test/dummy/app/assets/stylesheets/subfolder/another_plain.css);
+/* tests whether relative lookups of non-sass files works. */
+.default-old-css {
+  margin: 0px;
+}
+
+/* tests wheter relative lookups partials in the same directory. */

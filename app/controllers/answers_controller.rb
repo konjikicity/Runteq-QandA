@@ -1,9 +1,10 @@
 class AnswersController < ApplicationController
-  before_action :set_answers, only: %i[edit show update destroy]
-  def create
+  before_action :set_answers, only: %i[edit update destroy]
+
+  def create    
     @question = Question.find(params[:question_id])
     @answer = current_user.answers.build(answer_params)
-    if @answer.save
+    if @answer.save!
       redirect_to question_path(@question), success: t('defaults.message.created', item: Answer.model_name.human)
     else
       redirect_to question_path(@question), danger: t('defaults.message.not_created', item: Answer.model_name.human)

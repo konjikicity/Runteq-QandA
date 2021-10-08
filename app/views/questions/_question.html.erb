@@ -3,7 +3,7 @@
   <td class='w-auto'><%= question.name %></td>
   <td class='w-auto'><%= l question.created_at, format: :short %></td>
   <td class='w-auto'>
-  <% if current_user.own?(question) %>
+  <% if current_user&.own?(question) %>
   <%= link_to t('defaults.edit'), edit_question_path(question), class: 'btn btn-warning' %>
   <%= link_to t('defaults.delete'), question_path(question), class: 'btn btn-warning', method: :delete, data: { confirm: t('defaults.message.delete_confirm') } %>
   <% end %>

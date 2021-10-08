@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+  skip_before_action :require_login, only: %i[index show]
   before_action :set_question, only: %i[edit show update destroy]
   
   def index
@@ -6,7 +7,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    @answer = current_user.answers.new
+    @answer = Answer.new
     @answers = @question.answers.includes(:question).order(created_at: :desc).page(params[:page])
   end
 
@@ -49,4 +50,5 @@ class QuestionsController < ApplicationController
   def set_question
     @question = Question.find(params[:id])
   end
+
 end
