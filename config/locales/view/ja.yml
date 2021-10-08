@@ -30,6 +30,7 @@ ja:
   static_pages:
     top:
       title: 'RUNTEQ Q&A'
+      register_page: '新規登録'
   questions:
     show:
       name: '名前'

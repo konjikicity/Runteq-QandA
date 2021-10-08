@@ -8,6 +8,7 @@
     <% if logged_in? %>
     <% else %>
      <%= link_to t('defaults.login'), login_path, class: 'btn btn-warning'%>
+     <%= link_to t('.register_page'), new_user_path, class: 'btn btn-warning' %>
     <% end %>
     </div>
   </div>
