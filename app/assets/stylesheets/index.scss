@@ -4,12 +4,13 @@
 }
 
 body {
-    font-family: 'Corporate-Logo-Rounded';
+    font-family: 'Corporate-Logo-Rounded', sans-serif;
 }
 
 .question-font-size {
     font-size: 30px;
 }
+
 
 .pagination>li>a {          
   border: none;     /*枠線をなくす*/
@@ -29,3 +30,4 @@ body {
 .pagination>li>a:hover {        
   border-radius: 15px;    /*角を丸くする*/
 }
+

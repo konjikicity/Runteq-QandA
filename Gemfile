@@ -68,6 +68,7 @@ gem 'rails-i18n'
 gem 'font-awesome-sass', '~> 5.2.0'
 gem 'sorcery'
 gem 'kaminari'
+gem 'font-awesome-rails'
 
 group :production do
   gem 'pg'
