@@ -13,6 +13,6 @@ html
       = render 'shared/header'
     - else
       = render 'shared/before_login_header'
-    = render 'shared/flash_message'
+    = render 'shared/flash_message', flash: flash
     .container
       = yield

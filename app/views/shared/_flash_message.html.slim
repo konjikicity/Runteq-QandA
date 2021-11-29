@@ -1,3 +1,4 @@
-- flash.each do |message_type, message|
-  .alert.alert-<ruby.code="=.message_type"></ruby>
-    = message
+    - flash.each do |key, value|
+      - key = "info" if key == "notice"
+      - key = "danger"  if key == "alert"
+      = content_tag :div, value, class: "alert alert-#{key}"
