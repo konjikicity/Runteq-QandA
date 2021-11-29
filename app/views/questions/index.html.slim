@@ -1,0 +1,23 @@
+- content_for(:title, t('.title'))
+h2.mt-5.mb-5.text-center
+  = t('.title')
+  h2
+    = link_to t('.question'), new_question_path, class: 'btn btn-warning d-block mx-auto w-25 mb-5'
+    .row
+      .col-md-12
+        table.table.table-striped.text-size
+          thead.thead-light
+            tr
+              th.w-50
+                = t('defaults.question')
+              th.w-auto
+                = t('defaults.name')
+              th.w-auto
+                = t('defaults.created_at')
+              th
+
+            tr
+
+          tbody
+            = render @questions
+        = paginate @questions

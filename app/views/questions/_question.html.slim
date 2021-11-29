@@ -1,0 +1,11 @@
+tr
+  td.w-50
+    = link_to question.content, question_path(question), class: 'question-font-size text-dark'
+  td.w-auto
+    = question.name
+  td.w-auto
+    = l question.created_at, format: :short
+  td.w-auto
+    - if current_user&.own?(question)
+      = link_to t('defaults.edit'), edit_question_path(question), class: 'btn btn-warning'
+      = link_to t('defaults.delete'), question_path(question), class: 'btn btn-warning', method: :delete, data: { confirm: t('defaults.message.delete_confirm') }

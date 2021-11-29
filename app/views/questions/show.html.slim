@@ -1,0 +1,34 @@
+- content_for(:title, t('.title'))
+.row
+  .col-md-12.mt-5
+    h2
+      = @question.content
+    div
+      = t('.from')
+      = @question.name
+    hr
+    div
+      h3
+        = t('.title')
+      table.table.table-striped
+        - if @question.answers.any?
+          thead.thead-light
+            tr
+              td.w-auto
+                = t('.name')
+              td.w-50
+                = t('.answer')
+              td.w-auto
+                | 作成日
+              td.w-auto
+            tr
+
+          tbody
+            = render 'answers/answers', { answers: @answers }
+        - else
+          p
+            = t('.no_answer')
+      = paginate @answers
+      h3
+        = t('.answer_post')
+      = render 'answers/form', { answer: @answer, question: @question }

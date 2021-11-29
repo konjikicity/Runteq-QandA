@@ -1,0 +1,11 @@
+tr
+  td.w-auto
+    = answer.name
+  td.w-50
+    = answer.content
+  td.w-auto
+    = l answer.created_at, format: :short
+  td.w-auto
+    - if current_user&.own?(answer)
+      = link_to t('defaults.edit'), edit_question_answer_path(@question, answer), class: 'btn btn-warning'
+      = link_to t('defaults.delete'), question_answer_path(@question, answer), class: 'btn btn-warning', method: :delete, data: { confirm: t('defaults.message.delete_confirm') }

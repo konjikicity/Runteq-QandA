@@ -110,6 +110,9 @@ GEM
       sassc (>= 1.11)
     globalid (0.5.2)
       activesupport (>= 5.0)
+    hpricot (0.8.6)
+    html2slim (0.2.0)
+      hpricot
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     io-like (0.3.1)
@@ -220,6 +223,9 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    slim (4.1.0)
+      temple (>= 0.7.6, < 0.9)
+      tilt (>= 2.0.6, < 2.1)
     sorcery (0.16.1)
       bcrypt (~> 3.1)
       oauth (~> 0.5, >= 0.5.5)
@@ -236,6 +242,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    temple (0.8.2)
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -270,6 +277,7 @@ DEPENDENCIES
   faker
   font-awesome-rails
   font-awesome-sass (~> 5.2.0)
+  html2slim
   jbuilder (~> 2.5)
   jquery-rails (~> 4.3.1)
   kaminari
@@ -280,6 +288,7 @@ DEPENDENCIES
   rails-i18n
   sass-rails (~> 5.0)
   selenium-webdriver
+  slim
   sorcery
   spring
   spring-watcher-listen (~> 2.0.0)

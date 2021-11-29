@@ -69,6 +69,8 @@ gem 'font-awesome-sass', '~> 5.2.0'
 gem 'sorcery'
 gem 'kaminari'
 gem 'font-awesome-rails'
+gem 'slim'
+gem 'html2slim'
 
 group :production do
   gem 'pg'

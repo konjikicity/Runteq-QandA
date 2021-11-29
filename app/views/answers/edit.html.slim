@@ -1,0 +1,7 @@
+- content_for(:title, t('.title'))
+div
+  h2.mt-5
+    = t('.title')
+  h2
+    |  　
+    = render 'form', { question: @question, answer: @answer }

@@ -1,0 +1,10 @@
+= form_with model: question, local: true do |f|
+  = render 'shared/error_messages', object: f.object
+  .form-group
+    = f.label :name
+    = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.label :content
+    = f.text_area :content, class: 'form-control'
+  .text-center
+    = f.submit t('defaults.post'), class: 'btn btn-warning'

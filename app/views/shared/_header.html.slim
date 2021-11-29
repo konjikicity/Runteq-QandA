@@ -1,0 +1,9 @@
+header.navbar.navbar-fixed-top.navbar-inverse.bg-warning
+  .container
+    = link_to t('defaults.title'), root_path, id: "logo", class: "text-dark pt-2 pb-2 header-font-size"
+    nav
+      ul.nav.navbar-expand-md.navbar-right
+        li.mr-5
+          = link_to t('defaults.questions_all'), questions_path, class: 'text-dark'
+        li
+          = link_to t('defaults.logout'), logout_path, class: 'text-dark',method: :delete
