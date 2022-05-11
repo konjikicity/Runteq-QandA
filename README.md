@@ -1,24 +1,11 @@
-# README
+## Runteq-QandA
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<img src="https://i.gyazo.com/cdd747372fb2d9383bceebd1fc241752.png" width="800" height="400">
 
-Things you may want to cover:
+RUNTEQ基礎編終了時に作成した。理解度確認アプリです。
 
-* Ruby version
+主な機能は
+- ユーザー機能
+- 質問の投稿, 削除機能
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+登録していなくても質問の一覧は見る事ができます。
