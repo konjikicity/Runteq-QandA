@@ -24,6 +24,5 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: runteq_qanda_prod
-  username: postgres
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  encoding: unicode
+  pool: 5

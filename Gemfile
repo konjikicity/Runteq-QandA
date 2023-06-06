@@ -73,5 +73,5 @@ gem 'slim'
 gem 'html2slim'
 
 group :production do
-  gem 'pg'
+  gem "pg", "~> 1.4"
 end
