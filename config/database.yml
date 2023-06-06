@@ -7,6 +7,7 @@
 default: &default
   adapter: sqlite3
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  encoding: unicode
   timeout: 5000
 
 development:
@@ -23,5 +24,6 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  encoding: unicode
-  pool: 5
+  database: runteq_qanda_prod
+  username: postgres
+  password: <%= ENV['DATABASE_PASSWORD'] %>
