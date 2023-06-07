@@ -75,3 +75,5 @@ gem 'html2slim'
 group :production do
   gem "pg", "~> 1.4"
 end
+
+gem "dockerfile-rails", ">= 1.4", :group => :development

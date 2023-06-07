@@ -80,6 +80,8 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    dockerfile-rails (1.4.1)
+      rails
     erubi (1.10.0)
     execjs (2.8.1)
     faker (2.19.0)
@@ -277,6 +279,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  dockerfile-rails (>= 1.4)
   faker
   font-awesome-rails
   font-awesome-sass (~> 5.2.0)
