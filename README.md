@@ -1,6 +1,6 @@
 ## Runteq-QandA
 
-https://runteq-qanda.herokuapp.com/
+https://runteq-qanda.fly.dev/
 
 <img src="https://i.gyazo.com/cdd747372fb2d9383bceebd1fc241752.png" width="800" height="400">
 
